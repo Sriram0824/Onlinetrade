@@ -1,0 +1,115 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Register</title>
+    </h:head>
+    <h:body>
+        <h3 align="center">Register</h3>
+        <table align="center">
+        <h:form>
+            
+                
+          <tr>
+             <td>
+            SSN:
+            </td>
+            <td>
+            <h:inputText id="SSN" value="#{register.ssn}"></h:inputText>
+            </td>
+          </tr>
+                
+           <tr>
+             <td>
+            First Name:
+            </td>
+             <td>
+            <h:inputText id="firstName" value="#{register.firstName}"></h:inputText>
+            </td>
+           </tr>
+                
+           <tr>
+             <td>
+            Last Name:
+            </td>
+             <td>
+            <h:inputText id="lastName" value="#{register.lastName}"></h:inputText>
+            </td>
+           </tr>
+                
+           <tr>
+             <td>
+            Login Id:
+            </td>
+             <td>
+            <h:inputText id="loginId" value="#{register.loginId}"></h:inputText>
+            </td>
+           </tr>
+                
+           <tr>
+            <td>
+            Password:
+            </td>
+             <td>
+            <h:inputText id="password" value="#{register.password}"></h:inputText>
+           </td>
+           </tr>
+                
+           <tr>
+            <td>
+           First Security Question: 
+            </td>
+            <td>
+           <h:selectOneMenu value="#{register.sq1}">
+                <f:selectItem itemValue="" itemLabel="--select one--" />
+                <f:selectItem itemValue="FirstPetName" itemLabel="FirstPetName" />
+                <f:selectItem itemValue="FirstSchoolName" itemLabel="FirstSchoolName" />
+                <f:selectItem itemValue="FirstCarName" itemLabel="FirstCarName"/>
+            </h:selectOneMenu>
+            </td>
+           </tr>
+                
+           <tr>
+            <td>
+            Answer:
+            </td>
+            <td>
+            <h:inputText id="fsqa" value="#{register.asq1}"></h:inputText>
+            </td>
+            </tr>
+                
+            <tr>
+              <td>
+           Second Security Question:
+             </td>
+              <td>
+           <h:selectOneMenu value="#{register.sq2}">
+                <f:selectItem itemValue="" itemLabel="--select one--" />
+                <f:selectItem itemValue="FavoriteFood" itemLabel="FavoriteFood" />
+                <f:selectItem itemValue="FavoriteColor" itemLabel="FavoriteColor"/>
+                <f:selectItem itemValue="FavoritePlace" itemLabel="FavoritePlace"/>
+            </h:selectOneMenu>
+             </td>
+            </tr>
+                
+            <tr>
+             <td>
+              Answer:
+            </td>
+            <td>
+            <h:inputText id="ssqa" value="#{register.asq2}"></h:inputText>
+            </td> 
+           </tr>
+                
+            <tr>
+                <td colspan="2" align="middle">
+            <h:commandButton value="Register" action="#{register.RegisterUser}"/>
+              </td> 
+           </tr>   
+                
+          </h:form>
+            </table>
+    </h:body>
+</html>
+

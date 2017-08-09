@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+    
+    <title>Show Statement</title>
+    <body>
+       <h:form>
+       <p>
+           <h3 align="center">These are your orders #{login.userdetails.onlineId}</h3>
+       </p>
+           <h:dataTable id="statement" rows="#{login.userdetails1.DisplayOrders().size()}" 
+                        value="#{login.userdetails1.DisplayOrders()}" var="activity" align="center">
+               <h:column>
+                   <h:outputText styleClass="dataTableOutputtText" id="act" value="#{activity}"/>
+               </h:column>
+              
+                
+              </h:dataTable>  
+              
+       </h:form>
+    </body>
+</html>
